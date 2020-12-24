@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <jsp:include page="cmm/head.jsp"/>
+<jsp:include page="cmm/script.jsp"/>
 <body>
 	<header id="header">      
         <div class="container">
@@ -28,14 +29,11 @@
 	<jsp:include page="cmm/features.jsp"/>
     <jsp:include page="cmm/clients.jsp"/>
 	<jsp:include page="cmm/footer.jsp"/>
-    <script src="${cmm}/js/jquery.js"></script>
-    <script src="${cmm}/js/bootstrap.min.js"></script>
-    <script src="${cmm}/js/lightbox.min.js"></script>
-    <script src="${cmm}/js/wow.min.js"></script>
-    <script src="${cmm}/js/main.js"></script>   
-    <script src="${cmm}/js/index.js"></script>
+  
     <script	>
+    
     cmm.init(`${ctx}`)
+   
     </script>
 </body>
 </html>

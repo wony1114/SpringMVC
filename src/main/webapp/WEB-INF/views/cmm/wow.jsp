@@ -8,7 +8,7 @@
 			<div class="col-sm-4 text-center padding wow fadeIn"
 				data-wow-duration="1000ms" data-wow-delay="300ms">
 				<div class="single-service">
-					<div class="wow scaleIn" data-wow-duration="500ms"
+					<div id="icon1" class="wow scaleIn" data-wow-duration="500ms"
 						data-wow-delay="300ms">
 						<img src="${cmm}/images/home/icon1.png" alt="">
 					</div>
@@ -20,7 +20,7 @@
 			<div class="col-sm-4 text-center padding wow fadeIn"
 				data-wow-duration="1000ms" data-wow-delay="600ms">
 				<div class="single-service">
-					<div class="wow scaleIn" data-wow-duration="500ms"
+					<div id="icon2" class="wow scaleIn" data-wow-duration="500ms"
 						data-wow-delay="600ms">
 						<img src="${cmm}/images/home/icon2.png" alt="">
 					</div>
@@ -32,7 +32,7 @@
 			<div class="col-sm-4 text-center padding wow fadeIn"
 				data-wow-duration="1000ms" data-wow-delay="900ms">
 				<div class="single-service">
-					<div class="wow scaleIn" data-wow-duration="500ms"
+					<div id="icon3" class="wow scaleIn" data-wow-duration="500ms"
 						data-wow-delay="900ms">
 						<img src="${cmm}/images/home/icon3.png" alt="">
 					</div>
@@ -44,3 +44,6 @@
 		</div>
 	</div>
 </section>
+<script>
+wow.init()
+</script>

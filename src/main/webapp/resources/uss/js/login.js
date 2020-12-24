@@ -1,6 +1,4 @@
-/**
- * 
- */
+'use strict'
 $('#home').click(e => { location.href = '/'})
         $('#signin-btn').click(e => {
             e.preventDefault()

@@ -6,11 +6,12 @@
 	<div class="container">
 		<div class="main-slider">
 			<div class="slide-text">
-				<h1>We Are Creative Nerds</h1>
-				<p>Boudin doner frankfurter pig. Cow shank bresaola pork loin
+				<h1 id="title">We Are Creative Nerds</h1>
+				<p id="message">Boudin doner frankfurter pig. Cow shank bresaola pork loin
 					tri-tip tongue venison pork belly meatloaf short loin landjaeger
 					biltong beef ribs shankle chicken andouille.</p>
-				<a href="#" class="btn btn-common">SIGN UP</a>
+				<a id="stu_join" href="#" class="btn btn-common">학생 등록</a>
+				<a id="stu_login" href="#" class="btn btn-common">학생 접속</a>
 			</div>
 			<img src="${cmm}/images/home/slider/slide1/house.png"
 				class="img-responsive slider-house" alt="slider image"> <img
@@ -33,3 +34,6 @@
 		<i class="fa fa-sun-o fa-spin"></i>
 	</div>
 </section>
+<script>
+mainSlider.init()
+</script>
