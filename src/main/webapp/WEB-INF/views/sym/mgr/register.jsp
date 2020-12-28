@@ -112,3 +112,6 @@
             </div>
         </div>       
     </section>
+    <script>
+    mgr.init()
+    </script>
