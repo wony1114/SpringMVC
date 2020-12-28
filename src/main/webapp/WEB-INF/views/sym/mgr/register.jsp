@@ -112,6 +112,7 @@
             </div>
         </div>       
     </section>
-    <script>
-    mgr.init()
-    </script>
+    
+  <script>
+ manager.init()
+  </script>  

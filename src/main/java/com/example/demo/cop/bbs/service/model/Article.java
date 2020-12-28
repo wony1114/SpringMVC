@@ -5,6 +5,8 @@ import org.springframework.stereotype.Component;
 import lombok.Data;
 
 
+
+
 @Component @Data
 public class Article {
    private String artNum, title, content, count, writerNum;
