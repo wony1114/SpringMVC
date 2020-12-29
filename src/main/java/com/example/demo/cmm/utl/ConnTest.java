@@ -65,7 +65,7 @@ public class ConnTest {
 		}
 		
 	}
-	public static void main(String[] arg) {
+	public static void main(String... arg) {
 		System.out.println("DB테스트");
 		TestDAO instance  = new TestDAO();
 		System.out.println("리스트에 있는 값"+instance.getValue("managers", "email"));

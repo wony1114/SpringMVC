@@ -15,6 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.example.demo.cmm.enm.Messenger;
 import com.example.demo.sym.service.Teacher;
 import com.example.demo.sym.service.TeacherService;
 
@@ -30,11 +31,8 @@ public class TeacherController {
     TeacherService teacherService;
 
     @PostMapping("")
-    public Map<?, ?> register(@RequestBody Teacher teacher) {
-        var map = new HashMap<>();
-        logger.info("등록하려는 교강사정보: " + teacher.toString());
-        map.put("message", (teacherService.register(teacher) == 1) ? "SUCCESS" : "FAILURE");
-        return map;
+    public Messenger register(@RequestBody Teacher teacher) {
+        return (teacherService.register(teacher) == 1) ? Messenger.SUCCESS : Messenger.FAILURE;
     }
 
     @GetMapping("")
