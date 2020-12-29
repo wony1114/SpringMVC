@@ -1,5 +1,8 @@
 package com.example.demo.sts.service;
 
-public class GradeService {
+import org.springframework.stereotype.Service;
 
+@Service
+public class GradeService {
+    
 }

@@ -2,19 +2,33 @@ package com.example.demo.uss.service;
 
 import java.util.List;
 
-import com.example.demo.uss.service.model.Student;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import org.springframework.stereotype.Component;
+@Service
+public class StudentService{
+    @Autowired StudentMapper studentMapper;
 
-@Component
-public interface StudentService {
+    public int register(Student student) {
+        return studentMapper.insert(student);
+    }
 
-    public int register(Student student);
+   
+    public Student login(Student student) {
+        
+        return studentMapper.login(student);
+    }
 
-	public Student login(Student student);
+    
+    public Student detail(String userid) {
+        
+        return studentMapper.selectById(userid);
+    }
 
-	public Student detail(String userid);
 
-	public List<?> list();
+    public List<?> list() {
+        
+        return studentMapper.selectAll();
+    }
 
 }
