@@ -9,7 +9,7 @@ public class ManagerService{
     
     public int register(Manager manager) {
      
-    return managerMapper.insert(manager);
+    	return managerMapper.insert(manager);
     }
     
 }
