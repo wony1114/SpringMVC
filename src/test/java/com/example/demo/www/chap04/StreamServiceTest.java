@@ -1,4 +1,4 @@
-package com.example.demo.www.chap4;
+package com.example.demo.www.chap04;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
