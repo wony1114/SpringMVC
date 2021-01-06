@@ -1,14 +1,23 @@
 package com.example.demo.cmm.utl;
 import static com.example.demo.cmm.utl.Util.*;
 
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.function.BiFunction;
 import java.util.stream.Collectors;
+
+import org.springframework.stereotype.Service;
+
+import com.example.demo.cmm.enm.Path;
+import com.example.demo.sym.service.Manager;
+import com.example.demo.sym.service.Teacher;
+import com.example.demo.uss.service.Student;
+@Service("dummy")
 public class DummyGenerator {
 	public int makeYear(int from, int to) {
-		return rangeRandom.apply(from, to);
+		return random.apply(from, to);
 	}
 	/*
 	public String makeMonth(int from, int to) {
@@ -26,8 +35,19 @@ public class DummyGenerator {
 	그 외의 나머지 연도는 평년이다.
 	*/
 	public String makeBirthday() {
-		int year = rangeRandom.apply(1970, 2000);
-		int month = rangeRandom.apply(1, 13);
+		int year = random.apply(1970, 2000);
+		int month = random.apply(1, 13);
+		int date = 0;
+		switch(month){
+		case 2: date =((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)? 29: 28;
+		case 1: case 3: case 5: case 7: case 8: case 10: case 12: date = 31;
+		case 4: case 6: case 9: case 11: date = 30;
+		}
+		return year+"-"+month+"-"+date; 
+	}
+	public String makeRegdate() {
+		int year = random.apply(2019, 2020);
+		int month = random.apply(1, 13);
 		int date = 0;
 		switch(month){
 		case 2: date =((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)? 29: 28;
@@ -49,12 +69,9 @@ public class DummyGenerator {
 	 *랜덤 사용자 ID 생성하기 
 	 */
 	public String makeUserid() {
-		String text = ""; 
-		String ran = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"; 
-		for(int i = 0; i < 6; i++) { 
-			text += ran.charAt((int)(Math.random() * ran.length())); 
-			} 
-		return text;	
+		List<String> ls = Arrays.asList("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz".split(""));
+		Collections.shuffle(ls);
+		return ls.get(0)+ls.get(1)+ls.get(2)+ls.get(3);	
 	}
 	
 	/*
@@ -62,8 +79,8 @@ public class DummyGenerator {
 	 */
 	
 	public String makePhomeNumber() {
-		return "";
-	}
+			return "010"+random.apply(1000, 10000)+"-"+random.apply(1000, 10000); 
+			}	
 	
 	/*
 	 * 랜덤 이름 생성하기
@@ -103,6 +120,33 @@ public class DummyGenerator {
 				.collect(Collectors.toList())
 				.get(0);
 	    return fname.get(0)+a[0]+a[1];
+	}
+	public String makeSubject() {
+		List<String> ls = Arrays.asList("Java", "Spring", "Python", "jQuery", "dGovframe");
+		Collections.shuffle(ls);
+		return ls.get(0);
+	}
+	public String makeEmail() {
+		List<String> ls = Arrays.asList("@test.com", "@gmail.com", "@naver.com");
+		Collections.shuffle(ls);
+		return makeUserid()+ls.get(0);
+	}
+	public Student makeStudent() {
+		return new Student(makeUserid(), 
+				           "1", 
+				           makeUsername(), 
+				           makeBirthday(),
+				           makeGender(),
+				           makeRegdate(), 
+				           makeSubject(), 
+				           Path.DEFAULT_PROFILE.toString());
+	}
+	
+	public Manager makeManager() {
+		return new Manager("", makeEmail(), "1", makeUsername(), Path.DEFAULT_PROFILE.toString());
+	}
+	public Teacher makeTeacher() {
+		return new Teacher("", makeUsername(), makeEmail(), "1", makeSubject(), Path.DEFAULT_PROFILE.toString());
 	}
 }
 

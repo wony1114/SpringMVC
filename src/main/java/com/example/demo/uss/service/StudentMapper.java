@@ -1,5 +1,6 @@
 package com.example.demo.uss.service;
 
+import java.util.HashMap;
 import java.util.List;
 
 
@@ -16,5 +17,7 @@ public interface StudentMapper {
    public Student selectById(String userid);
 
    public List<Student> selectAll();
+
+   public void truncate(HashMap<String, String> map);
 
 }
