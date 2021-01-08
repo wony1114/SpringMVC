@@ -1,12 +1,12 @@
+
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-<h1 style="width:300px; margin:0 auto; padding-bottom:50px;">관리자 접속화면</h1>
+<h1 style="width:300px;margin: 0 auto;padding-bottom: 50px;">관리자 접속화면</h1>
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 form {border: 3px solid #f1f1f1;}
-
 input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
@@ -15,7 +15,6 @@ input[type=text], input[type=password] {
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
-
 button {
   background-color: #4CAF50;
   color: white;
@@ -25,36 +24,29 @@ button {
   cursor: pointer;
   width: 100%;
 }
-
 button:hover {
   opacity: 0.8;
 }
-
 .cancelbtn {
   width: auto;
   padding: 10px 18px;
   background-color: #f44336;
 }
-
 .imgcontainer {
   text-align: center;
   margin: 24px 0 12px 0;
 }
-
 img.avatar {
   width: 40%;
   border-radius: 50%;
 }
-
 .container {
   padding: 16px;
 }
-
 span.psw {
   float: right;
   padding-top: 16px;
 }
-
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
   span.psw {
@@ -67,8 +59,9 @@ span.psw {
 }
 </style>
 
+<div>
   <div class="imgcontainer">
-    <img style="width:100px; height:100px;" src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar">
+    <img style="width:100px;height:100px" src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar">
   </div>
 
   <div class="container">
@@ -88,19 +81,19 @@ span.psw {
     <button type="button" class="cancelbtn">Cancel</button>
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
+</div>
 
 <script>
-$(`#mgr-access-btn`).click(function(){
-	alert(`mgr access`)
+$(`#mgr-access-btn`).click(function(e) {
 	e.preventDefault()
 	$.ajax({
 		url: `${ctx}/managers/access`,
-		type: `POST`,
+		type: `post`,
 		data: JSON.stringify({email: $(`#uid`).val(), password:$(`#pwd`).val()}),
 		dataType: 'json',
 		contentType: 'application/json',
 		success: function(d){
-			location.href = `${ctx}/admin/mgr/index`
+			location.href = `${ctx}/mgr/index`
 		},
 		error: function(e){
 			alert(`Fail`)

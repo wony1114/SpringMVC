@@ -4,12 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ManagerService{
+public class ManagerService {
     @Autowired ManagerMapper managerMapper;
-    
+
     public int register(Manager manager) {
-     
-    	return managerMapper.insert(manager);
+        return managerMapper.insert(manager);
     }
-    
+
 }

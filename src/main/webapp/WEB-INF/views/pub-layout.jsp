@@ -6,23 +6,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<tiles:insertAttribute name="head"/>
+<tiles:insertAttribute name="head"/> 
 </head>
 <body>
-<article id="layout-gnb">
-	<tiles:insertAttribute name="gnb"/>
-</article>
 
-<h1>The article and footer elements + CSS</h1>
-<article id="layout-container">
+<article id="layout-container" style="margin-top: 100px">
 	<tiles:insertAttribute name="container"/>
 </article>
 
-
-<footer id="layout-footer">
-<tiles:insertAttribute name="footer"/>
-
-</footer>
 
 </body>
 </html>
