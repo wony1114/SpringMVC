@@ -4,7 +4,8 @@ import java.io.File;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-
+import java.util.HashMap;
+import java.util.Map;
 import java.util.function.BiFunction;
 import java.util.function.BiPredicate;
 import java.util.function.Consumer;
@@ -25,5 +26,6 @@ public class Util {
 	public static Supplier<LocalTime> time = () -> LocalTime.now();
 	public static BiFunction<String,String, File> mkDir = File::new;
 	public static BiFunction<File,String, File> mkFile = File::new;
-	
+	public static Supplier<Map<String, Integer>> map = HashMap::new;
+	// map -> count
 }

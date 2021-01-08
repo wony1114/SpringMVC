@@ -23,5 +23,6 @@ public interface StudentMapper {
 	public void truncate(HashMap<String, String> map);
 
 	public int count(HashMap<String, String> map);
+
     
 }
