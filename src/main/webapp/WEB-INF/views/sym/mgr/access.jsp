@@ -1,4 +1,3 @@
-
 <%@ page language="java" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
@@ -66,7 +65,7 @@ span.psw {
 
   <div class="container">
     <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" id="uid" value="a@test.com" required>
+    <input type="text" placeholder="Enter Username" id="uid" value="fNhS@gmail.com" required>
 
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" id="pwd" value="1" required>
@@ -82,8 +81,6 @@ span.psw {
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
 </div>
-<script src = "${mgr}/js/mgr.js"></script>
 <script>
-$(`#mgr-access-btn`).click(function() {mgr.access(`${ctx}`)
-})
+$(`#mgr-access-btn`).click(function() {mgr.access(`${ctx}`)})
 </script>

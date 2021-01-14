@@ -3,15 +3,10 @@ var stu = stu || {}
 stu.insertMany = x => {
 	$.getJSON(`${x}/students/insert-many/${$('#stu-data-count').val()}`, 
 			d => { location.reload();})}
-			
-stu.truncate = x => {
-	$.getJSON(`${x}/students/truncate`,
-	 		d => { location.reload()})}
-		
+
 stu.count = x => {
 	$.getJSON(`${x}/students/count`, 
 			d => { $(`#stu-count`).text(d)})}
-			
 stu.list = x => {	
 	$.getJSON(`${x.ctx}/students/page/${x.pageSize}/${x.pageNum}`, d => { 
 		$(`<h3/>`)
@@ -24,9 +19,9 @@ stu.list = x => {
 		.appendTo(`#title`) 
 		$(`<tr/>`).attr({id: `tr_1`}).appendTo(`#tab`)
 		$.each(
-			[`No`,`아이디`,`이름`,`생년월일`,`성별`,`등록일`,`전공과목`], 
+			[`No`,`아이디`,`이름`,`생년월일`,`성별`,`등록일`,`담당매니저`], 
 			(i,j) => {
-			$(`<th>${j}</th>`).css({backgroundColor: `lightsteelblue`})
+			$(`<th>${j}</th>`).css({backgroundColor: `gray`})
 			.appendTo(`#tr_1`)
 		})
 		$.each(d.list, 
@@ -37,7 +32,7 @@ stu.list = x => {
 						<td>${j.birthday}</td>
 						<td>${j.gender}</td>
 						<td>${j.regDate}</td>
-						<td>${j.subject}</td></tr>`)
+						<td>${j.mgrNum}</td></tr>`)
 						.css({padding: `15px`, textAlign: `left`, fontSize: `medium`})
 						.appendTo(`#tab`)
 		})
@@ -61,7 +56,7 @@ stu.list = x => {
 			$(`<a/>`)
 			.attr({href: `#`})
 			.text(`<<`)
-			.css({backgroundColor: `lightgray`})
+			.css({backgroundColor: `gray`})
 			.appendTo(`#stu_page`)
 			.click(e=>{
 				e.preventDefault()
@@ -70,11 +65,11 @@ stu.list = x => {
 			})
 		}
 		$.each(
-			[...range(page.startPage, page.endPage)],
+			[...range(page.startPage, page.endPage)] ,
 			 (i, j) => {
 				$(`<a/>`)
 					.attr({href: `#`})
-					.css({backgroundColor: (j != page.pageNum) ? `lightgray` : `lightsteelblue`})
+					.css({backgroundColor: (j != page.pageNum) ? `gray` : `yellow`})
 					.text(`${j}`)
 					.appendTo(`#stu_page`)
 					.click(e=>{
@@ -86,8 +81,8 @@ stu.list = x => {
 		if(page.existNext){
 			$(`<a/>`)
 			.attr({href: `#`})
+			.css({backgroundColor: `gray`})
 			.text(`>>`)
-			.css({backgroundColor: `lightgray`})
 			.appendTo(`#stu_page`)
 			.click(e=>{
 				e.preventDefault()
@@ -190,4 +185,3 @@ const userid = sessionStorage.getItem('userid')
 										<li class="mb-1"><span data-feather="map-pin" class="feather-sm mr-1"></span> 주소 : <a href="#">서울</a></li>
 									</ul>`)
 		}) */
-

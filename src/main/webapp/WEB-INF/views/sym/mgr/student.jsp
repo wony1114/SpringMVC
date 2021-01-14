@@ -214,7 +214,7 @@
 									<a href="#" class="list-group-item">
 										<div class="row no-gutters align-items-center">
 											<div class="col-2">
-												<img src="<%=application.getContextPath()%>/assets/mgr/img/avatars/avatar-5.jpg" class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
+												<img src="https://www.w3schools.com/howto/img_avatar2.png" class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
 											</div>
 											<div class="col-10 pl-2">
 												<div class="text-dark">Vanessa Tucker</div>
@@ -226,7 +226,7 @@
 									<a href="#" class="list-group-item">
 										<div class="row no-gutters align-items-center">
 											<div class="col-2">
-												<img src="<%=application.getContextPath()%>/assets/mgr/img/avatars/avatar-2.jpg" class="avatar img-fluid rounded-circle" alt="William Harris">
+												<img src="https://www.w3schools.com/howto/img_avatar2.png" class="avatar img-fluid rounded-circle" alt="William Harris">
 											</div>
 											<div class="col-10 pl-2">
 												<div class="text-dark">William Harris</div>
@@ -238,7 +238,7 @@
 									<a href="#" class="list-group-item">
 										<div class="row no-gutters align-items-center">
 											<div class="col-2" >
-												<img src="<%=application.getContextPath()%>/assets/mgr/img/avatars/avatar-4.jpg" class="avatar img-fluid rounded-circle" alt="Christina Mason">
+												<img src="https://www.w3schools.com/howto/img_avatar2.png" class="avatar img-fluid rounded-circle" alt="Christina Mason">
 											</div>
 											<div class="col-10 pl-2">
 												<div class="text-dark">Christina Mason</div>
@@ -250,7 +250,7 @@
 									<a href="#" class="list-group-item">
 										<div class="row no-gutters align-items-center">
 											<div class="col-2">
-												<img src="<%=application.getContextPath()%>/assets/mgr/img/avatars/avatar-3.jpg" class="avatar img-fluid rounded-circle" alt="Sharon Lessman">
+												<img src="https://www.w3schools.com/howto/img_avatar2.png" class="avatar img-fluid rounded-circle" alt="Sharon Lessman">
 											</div>
 											<div class="col-10 pl-2">
 												<div class="text-dark">Sharon Lessman</div>
@@ -422,7 +422,7 @@
 
 											<div class="media mt-1">
 												<a class="pr-3" href="#">
-                <img src="<%=application.getContextPath()%>/assets/mgr/img/avatars/avatar-4.jpg" width="36" height="36" class="rounded-circle mr-2" alt="Christina Mason">
+                <img src="https://www.w3schools.com/howto/img_avatar2.png" width="36" height="36" class="rounded-circle mr-2" alt="Christina Mason">
               </a>
 												<div class="media-body">
 													<div class="border text-sm text-muted p-2 mt-1">

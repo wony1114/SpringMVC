@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
  * Handles requests for the application home page.
  */
 @Controller
-@SessionAttributes({"ctx","cmm","mgr","tea","uss"})
+@SessionAttributes({"ctx","cmm","mgr","tea","uss","grd"})
 public class HomeController {
 	@Autowired HttpSession session;
 	@Autowired HttpServletRequest request;
@@ -30,7 +30,7 @@ public class HomeController {
     	session.setAttribute("mgr", ctx+"/resources/sym/mgr");
     	session.setAttribute("tea", ctx+"/resources/sym/tea");
     	session.setAttribute("stu", ctx+"/resources/uss");
-    	
+    	session.setAttribute("sts", ctx+"/resources/sts");
         logger.info("Project Initialized ... ");
         
         return "index";
@@ -60,6 +60,11 @@ public class HomeController {
     public String manager(@PathVariable String page) {
         logger.info("이동 파일: " + page);
         return String.format("mgr:%s", page);
+    }
+    @GetMapping("/tea/{page}") 
+    public String teacher(@PathVariable String page) {
+    	 logger.info("이동 파일: " + page);
+         return String.format("tea:%s", page);
     }
     /*
      * cop (Content Operater) 디렉토리 이동시 content 사용

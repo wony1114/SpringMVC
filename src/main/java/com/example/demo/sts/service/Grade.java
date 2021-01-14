@@ -9,17 +9,16 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Component @Data @AllArgsConstructor @Lazy @NoArgsConstructor
-public class Grade{
-    private String gradeNum, subject, score, grade, stuNum;
+@Component
+@Data @AllArgsConstructor @Lazy @NoArgsConstructor
+public class Grade {
+	private int grdNum, score, stuNum, subNum;
+    private String grade, examDate, passExam;
+    
+    public Grade(int stuNum, int subNum, String examDate, int score) {
+    	this.subNum = subNum;
+    	this.examDate = examDate;
+    	this.score = score;
+    	this.stuNum = stuNum;
+    }
 }
-/*
-create table grades(
-   grade_num int primary key ,
-   subject varchar2(20),
-   score varchar2(20),
-   grade varchar2(20),
-   stu_num int,
-   constraint grades_fk foreign key(stu_num) references students(stu_num)
-   )
-*/

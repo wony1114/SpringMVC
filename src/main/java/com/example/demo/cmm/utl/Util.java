@@ -1,5 +1,7 @@
 package com.example.demo.cmm.utl;
 
+import static com.example.demo.cmm.utl.Util.integer;
+
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -22,6 +24,7 @@ public class Util {
 	public static Function<Object, String> string = String :: valueOf;
 	public static Function<String, Integer> integer = Integer :: valueOf;
 	public static Function<String, Object> intO = Integer :: valueOf;
+	public static BiFunction<String, String, Integer> mySkip = (t, u) -> (integer.apply(t) -1) * integer.apply(u);
 	public static BiPredicate<String, String> equals = String :: equals;
 	public static BiFunction<Integer, Integer, Integer> random =(t,u)->(int)(Math.random()*(u-t))+t;
 	public static Function<Integer, int[]> intArr = int[] :: new;

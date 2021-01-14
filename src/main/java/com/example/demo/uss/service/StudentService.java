@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.example.demo.cmm.enm.Sql;
+import com.example.demo.cmm.enm.Table;
 import com.example.demo.cmm.utl.DummyGenerator;
 import com.example.demo.cmm.utl.Pagination;
 
@@ -30,21 +31,19 @@ public class StudentService{
     	for(int i=0; i < count; i++) {
     		studentMapper.insert(dummy.makeStudent());
     	}
-    	int a = count(); 
-    	System.out.println("---------------------------"+a);
-    	return a;
+    	return count(); 
     }
     @Transactional
     public int truncate() {
     	var map = new HashMap<String,String>();
-    	map.put("TRUNCATE_STUDENTS", Sql.TRUNCATE_STUDENTS.toString());
+    	map.put("TRUNCATE_STUDENTS", Sql.TRUNCATE.toString() + Table.STUDENTS);
     	studentMapper.truncate(map);
     	return count() != 0 ? 0 : 1;
     }
     
     public int count() {
     	var map = new HashMap<String,String>();
-    	map.put("COUNT_STUDENTS", Sql.COUNT.toString() + "students");
+    	map.put("COUNT_STUDENTS", Sql.TOTAL_COUNT.toString() +  Table.STUDENTS);
     	return studentMapper.count(map);
     }
     

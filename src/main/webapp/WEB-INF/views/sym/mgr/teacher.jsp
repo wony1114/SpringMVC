@@ -214,7 +214,7 @@
 									<a href="#" class="list-group-item">
 										<div class="row no-gutters align-items-center">
 											<div class="col-2">
-												<img src="<%=application.getContextPath()%>/assets/mgr/img/avatars/avatar-5.jpg" class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
+												<img src="https://www.w3schools.com/howto/img_avatar2.png" class="avatar img-fluid rounded-circle" alt="Vanessa Tucker">
 											</div>
 											<div class="col-10 pl-2">
 												<div class="text-dark">Vanessa Tucker</div>
@@ -299,7 +299,7 @@
 									<h5 class="card-title mb-0">상세 프로필</h5>
 								</div>
 								<div class="card-body text-center" id="profileImage">
-									<img src="<%=application.getContextPath()%>/assets/mgr/img/avatars/avatar-4.jpg" alt="Christina Mason" class="img-fluid rounded-circle mb-2" width="128" height="128" />
+									<img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Christina Mason" class="img-fluid rounded-circle mb-2" width="128" height="128" />
 									<h5 class="card-title mb-0">Christina Mason</h5>
 									<div class="text-muted mb-2">Lead Developer</div>
 
@@ -422,7 +422,7 @@
 
 											<div class="media mt-1">
 												<a class="pr-3" href="#">
-                <img src="<%=application.getContextPath()%>/assets/mgr/img/avatars/avatar-4.jpg" width="36" height="36" class="rounded-circle mr-2" alt="Christina Mason">
+                <img src="https://www.w3schools.com/howto/img_avatar2.png" width="36" height="36" class="rounded-circle mr-2" alt="Christina Mason">
               </a>
 												<div class="media-body">
 													<div class="border text-sm text-muted p-2 mt-1">
