@@ -1,5 +1,6 @@
 package com.example.demo.cmm.utl;
-
+import static com.example.demo.cmm.utl.Util.*;
+import static java.util.stream.Collectors.*;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -16,7 +17,6 @@ import com.example.demo.sym.service.Manager;
 import com.example.demo.sym.service.Teacher;
 import com.example.demo.uss.service.Student;
 
-import static com.example.demo.cmm.utl.Util.*;
 
 @Service("dummy")
 public class DummyGenerator {
@@ -176,10 +176,10 @@ public class DummyGenerator {
 	public Teacher makeTeacher(int i) {
 		return new Teacher(
 				makeUsername(), 
-				"1", 
+				"1", // 비번
 				Path.DEFAULT_PROFILE.toString(),
-				i); //makeTeacher를 1~5까지만 생성
-	}
+				i); // makeTeacher() 를 1 ~ 5 까지만 생성하기 위해
+	}// makeSubNum()
 	/*********************************
 	 * Manager Dummy Data Generator 
 	 * *******************************

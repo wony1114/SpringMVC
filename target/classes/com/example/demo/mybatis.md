@@ -5,9 +5,7 @@ choose (when, otherwise)
 trim (where, set)
 foreach
 if
-<select id="find" 
-	parameterType="com.gms.web.Command"
-	resultType="com.gms.web.Domain"> 
+<select id="find" parameterType="com.gms.web.Command" resultType="com.gms.web.Domain"> 
 	SELECT * FROM BLOG 
     WHERE state = 'ACTIVE' 
   <if test="title != null">

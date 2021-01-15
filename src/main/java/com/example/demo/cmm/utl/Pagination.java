@@ -1,17 +1,10 @@
 package com.example.demo.cmm.utl;
-
-import org.springframework.beans.factory.annotation.Autowired;
+import static com.example.demo.cmm.utl.Util.*;
+import static java.util.stream.Collectors.*;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
-import com.example.demo.cmm.service.CommonMapper;
-import com.example.demo.uss.service.StudentService;
-
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import static com.example.demo.cmm.utl.Util.*;
-
-import java.util.function.Function;
 
 @Component("page") @Data @Lazy @NoArgsConstructor
 public class Pagination {
@@ -41,8 +34,8 @@ public class Pagination {
 		this.nextBlock = startPage + BLOCK_SIZE;
 		this.prevBlock = startPage - BLOCK_SIZE;
 	}
-	// POJO  방식을 위한 생성자 오버로드
-	public Pagination(int pageSize, int PageNum, int count) {
+	// POJO 방식을 위한 생성자 오버로드
+	public Pagination(int pageSize, int pageNum, int count) {
 		this.pageSize = pageSize;
 		this.pageNum = pageNum;
 		this.totalCount = count;

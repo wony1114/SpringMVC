@@ -80,5 +80,6 @@ from grades g
 	join students s on s.stu_num = g.stu_num) a
 	join teachers t on t.sub_num = a.subNum
 where a.examDate like #{value}
+
 </select>
 </mapper>
