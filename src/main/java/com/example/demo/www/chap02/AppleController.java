@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.function.Predicate;
 import static java.util.Comparator.comparing;
-import static com.example.demo.cmm.utl.Util.*;
+import static com.example.demo.dwh.domain.Util.*;
 
 import lombok.Data;
 

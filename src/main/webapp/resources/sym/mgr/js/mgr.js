@@ -21,12 +21,10 @@ mgr.register = x => {
 }
 
 mgr.access = x => {
-	alert(`>>>>`)
-	/*
 	$.ajax({
-		url: `${x}/managers/access`,
+		url: `${x}/auth/login/manager`,
 		type: `post`,
-		data: JSON.stringify({email: $(`#uid`).val(), password:$(`#pwd`).val()}),
+		data: JSON.stringify({mgrNum: $(`#mgrNum`).val(), password:$(`#password`).val()}),
 		dataType: 'json',
 		contentType: 'application/json',
 		success: d => {
@@ -35,6 +33,6 @@ mgr.access = x => {
 		error: e => {
 			alert(`Fail`)
 		}
-	}) */
-	location.href = `${x}/mgr/index`
+	})
+	
 }
